@@ -71,13 +71,7 @@ href="https://github.com/statikfintechllc/AscendAI/blob/master/About Us/WHY_GREM
 
 </div>
 
-> [!WARNING]
->
-> Mirror under construction, Coding & tunnel Bullet Proof, Fully wired Mirror, in wait of debugging passes.
-
-⚠️*The Working Directory will be AscendAI/GremlinGPT, His tools are Architeched(MB-MM is one of them). Time to attach and Debug, Lets Scare the .org*⚠️
-
-Built 100% hands-on dev grind, properly utilizong the multi-million dollar tools Gifted to the Public, @OpenAI.
+Built 100% hands-on dev grind, properly utilizong the multi-million dollar tools Gifted to the Public, @OpenAI. @Copilot. @xAI
 
 Every repo, every step, public and open. Thanks for watching, learning, and building with me.
 
@@ -94,6 +88,8 @@ Every repo, every step, public and open. Thanks for watching, learning, and buil
 > Has Application for Linux
 >
 > Remote code, build, and ops on your home computer — from your phone — with zero cloud or port-forwarding.
+>
+> At the click of a button.
 
 <h1 align="center">AscendAI Traffic</h1>
 <div align="center">
@@ -128,11 +124,6 @@ href="https://github.com/statikfintechllc/AscendDocs_of_GovSeverance">
 
 ---
 
-> [!IMPORTANT]
->
-> In-Progress:
-> Mobile Mirror mode is in progress—run your desktop from your phone, anywhere.
-
 
 ## 🚀 What is this?
 
@@ -144,8 +135,6 @@ href="https://github.com/statikfintechllc/AscendDocs_of_GovSeverance">
 Powered by:
 - [Tailscale](https://tailscale.com/) – WireGuard mesh VPN
 - [code-server](https://github.com/coder/code-server) – VSCode in your browser
-
-Plus:
 - 🛠️ Robust bash automation
 - 🔒 **Private mesh**: Only your devices can connect
 - ⚡ **Mobile-optimized**: Scan a QR, code in seconds
@@ -160,7 +149,7 @@ Plus:
 - ✅ QR code terminal output for mobile login
 - ✅ Clean shutdown script: kills all tunnels and services
 - ✅ No open ports or public exposure
-- ✅ Desktop launcher: Start/Stop/Logs — no terminal required
+- ✅ Desktop launcher: Start/Stop/Logs — After running `install.sh` No terminal commands are required for linux users.
 
 ---
 
@@ -244,8 +233,8 @@ After install, you can:
 
 # 📖 Documentation
 
-- [System Overview](https://github.com/statikfintechllc/Mobile-Developer/blob/master/docs/SYSTEM_OVERVIEW.md)
-- [Directory Structure](https://github.com/statikfintechllc/Mobile-Developer/blob/master/docs/STRUCTURE.md)
+- [System Overview](https://github.com/KDK-Grim/Mobile-Developer/blob/master/docs/SYSTEM_OVERVIEW.md)
+- [Directory Structure](https://github.com/KDK-Grim/Mobile-Developer/blob/master/docs/STRUCTURE.md)
 - [About Us](https://github.com/statikfintechllc/AscendAI/blob/master/About%20Us/FOUNDER_STATEMENT.md)
 
 ---
