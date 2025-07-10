@@ -167,7 +167,7 @@ Powered by:
 ### 📥 Clone and Install
 
 ```bash
-git clone https://github.com/youruser/mobile-developer.git
+git clone https://github.com/KDK-Grim/mobile-developer.git
 cd mobile-developer/env
 chmod +x install.sh
 ./install.sh
