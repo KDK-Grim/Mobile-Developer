@@ -68,40 +68,9 @@ sudo chmod +x "$APPDIR/remove_mobile.sh"
 cp "$REPO/logs/code-server.log" "$APPDIR/code-server.log"
 sudo chmod +x "$APPDIR/code-server.log"
 
-echo "[*] Installing Frontend Files and Checking API's..."
-cp "$REPO/mobilemirror/frontend/public/manifest.json" "$APPDIR/manifest.json"
-cp "$REPO/mobilemirror/frontend/src/App.jsx" "$APPDIR/App.jsx"
-cp "$REPO/mobilemirror/frontend/src/Terminal.jsx" "$APPDIR/Terminal.jsx"
-cp "$REPO/mobilemirror/frontend/src/Editor.jsx" "$APPDIR/Editor.jsx"
-cp "$REPO/mobilemirror/frontend/src/FileManager.jsx" "$APPDIR/FileManager.jsx"
-cp "$REPO/mobilemirror/frontend/src/ScreenViewer.jsx" "$APPDIR/ScreenViewer.jsx"
-cp "$REPO/mobilemirror/frontend/src/MouseController.jsx" "$APPDIR/MouseController.jsx"
-cp "$REPO/mobilemirror/frontend/src/api.js" "$APPDIR/api.js"
-
-echo "[*] Installing Backend Files and Systems..."
-cp "$REPO/mobilemirror/backend/screen_streamer.py" "$APPDIR/screen_streamer.py"
-cp "$REPO/mobilemirror/backend/mouse_input.py" "$APPDIR/mouse_input.py"
-cp "$REPO/mobilemirror/backend/utils/auth.py" "$APPDIR/auth.py"
-cp "$REPO/mobilemirror/backend/utils/logger.py" "$APPDIR/logger.py"
-cp "$REPO/mobilemirror/backend/utils/qr_generator.py" "$APPDIR/qr_generator.py"
-cp "$REPO/mobilemirror/config/system.toml" "$APPDIR/system.toml"
-cp "$REPO/mobilemirror/config/tailscale_setup.sh" "$APPDIR/tailscale_setup.sh"
-chmod +x "$APPDIR/tailscale_setup.sh"
-
 # Copy icon (flat, no folder)
 cp "$REPO/env/MobileDeveloper.png" "$ICNDIR/MobileDeveloper.png"
 sudo chmod +x "$ICNDIR/MobileDeveloper.png"
-
-echo "[*] Copying Mobile-Mirror core scripts..."
-cp "$REPO/mobilemirror/start_mirror.sh" "$APPDIR/start_mirror.sh"
-cp "$REPO/mobilemirror/backend" "$APPDIR/backend"
-cp "$REPO/mobilemirror/frontend" "$APPDIR/frontend"
-cp "$REPO/mobilemirror/frontend/public/manifest.json" "$APPDIR/manifest.json"
-
-sudo chmod +x "$APPDIR/start_mirror.sh"
-
-echo "[*] Checking log directories..."
-cp "$REPO/mobilemirror/system/services" "$APPDIR/system/services"
 
 # Write .desktop file with ONLY BARE FILENAMES, no paths
 cat > "$APPDIR/MobileDeveloper.desktop" <<EOF
@@ -149,48 +118,6 @@ for f in "${files[@]}"; do
         echo -e "${RED}✘ $f missing!${RESET}"
     fi
 done
-
-echo
-echo "[*] Mobile-Mirror Health Check:"
-
-files=(
-    "$APPDIR/backend/utils/auth.py"
-    "$APPDIR/backend/utils/logger.py"
-    "$APPDIR/backend/utils/qr_generator.py"
-    "$APPDIR/backend/app.py"
-    "$APPDIR/backend/screen_streamer.py"
-    "$APPDIR/backend/mouse_input.py"
-    "$APPDIR/backend/file_ops.py"
-    "$APPDIR/backend/terminal_bridge.py"
-    "$APPDIR/frontend/public/manifest.json"
-    "$APPDIR/frontend/src/App.jsx"
-    "$APPDIR/frontend/src/api.js"
-    "$APPDIR/frontend/src/FileManager.jsx"
-    "$APPDIR/frontend/src/MouseController.js"
-    "$APPDIR/frontend/src/ScreenViewer.jsx"
-    "$APPDIR/frontend/src/Terminal.jsx"
-    "$APPDIR/frontend/src/Editor.jsx"
-    "$APPDIR/system.toml"
-)
-
-for f in "${files[@]}"; do
-    if [ -f "$f" ]; then
-        if [[ "$f" == *.sh || "$f" == *.py || "$f" == *.jsx || "$f" == *.json || "$f" == *.js ]]; then
-            chmod +x "$f"
-        elif [[ "$f" == *.png ]]; then
-            chmod 644 "$f"
-        fi
-        echo -e "${GREEN}✔ $f found and permissions set${RESET}"
-    else
-        echo -e "${RED}✘ $f missing!${RESET}"
-    fi
-done
-
-echo
-echo "[*] Log File Read Write Check:"
-sudo chmod 644 $APPDIR/system/services/touchcore_backend.log
-sudo chmod 644 $APPDIR/system/services/touchcore_frontend.log
-sudo chmod 644 $APPDIR/MobileDeveloper.desktop
 
 echo
 echo "[*] ✅Triple-Check Complete. Systems Located, Placed, Permissions Set, and all files are Healthy✅."
